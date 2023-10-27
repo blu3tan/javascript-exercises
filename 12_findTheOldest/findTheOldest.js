@@ -1,5 +1,5 @@
     const findTheOldest = function(array) {
-        array.map(item => (item.yearOfDeath === undefined) 
+        array.forEach(item => (item.yearOfDeath === undefined) 
             ? item.yearOfDeath = new Date().getFullYear() 
             : item.yearOfDeath);
         return array.reduce((oldest, current) => {
